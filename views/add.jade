@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    div(class='container')
+        div(class='collapse navbar-collapse')
+        h2 Add a New Directory
+        form(method='post', action='/directory/add')
+            div(class='col-lg-8 col-lg offset-2')
+                div(class='row control-group')
+                    label Name
+                    input(name='name', required, placeholder='name')
+                div(class='row control-group')
+                    label Phone
+                     input(name='phone', required, placeholder='phone')
+                div(class='row control-group')
+                    label Admission Cost
+                    input(name='price', required, placeholder='price', type='number')
+                div(class='row control-group')
+                label Location
+                    input(name='location', required, placeholder='location', type='text')
+                div(class='row control-group')
+                    label Website
+                    input(name='website', required, placeholder='website', type='url')
+                div(class='row control-group')
+                    label Hours of Operation
+                    input(name='hours', required, placeholder='hours')
+                input(type='submit', value='Add Directory')

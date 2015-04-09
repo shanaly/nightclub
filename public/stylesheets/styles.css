@@ -1,0 +1,22 @@
+h1 {
+    color:whitesmoke;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+}
+h3 {
+    color:whitesmoke;
+    text-align: center;
+}
+footer {
+    color: whitesmoke;
+}
+
+footer ul li a:hover {
+    color: lightsteelblue;
+}
+input {
+ color:black;   
+}
+a {
+ color: darkblue;   
+}

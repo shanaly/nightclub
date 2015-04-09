@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    div(class='container')
+        div(class='collapse navbar-collapse')
+            a(href='/directory', title='List Directory') List directory
+        h2 Edit Directory
+        form(method='post', action='/directory/edit/#{directory_id}')
+            div(class='col-lg-8 col-lg offset-2')
+                div(class='row control-group')
+                    label Name
+                    input(type=text, name='name', required, placeholder='Name', value='#{directory.name}')
+                div(class='row control-group')
+                    label Phone
+                    input(type=text, name='phone', required, placeholder='phone', value='#{directory.phone}')
+                div(class='row control-group')
+                    label Location
+                    input(type=text, name='location', required, placeholder='location', value='#{directory.location}')
+                input(type='hidden', name='id' value='#{directory._id}')
+                label Website
+                   input(type=url, name='website', required, placeholder='website', value='#{directory.website}')
+                div(class='row control-group')
+                label Hours
+                    input(type=number, name='hours', required, placeholder='hours', value='#{directory.hours}')
+                div(class='row control-group')
+                label Price
+                    input(type=text, name='price', required, placeholder='price', value='#{directory.price}')
+                div(class='row control-group')
+                  input(type='submit', value='Update Directory')
+

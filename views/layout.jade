@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.min.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Julius+Sans+One')
+  body
+  .row
+    .large-12.columns
+      h1 Nightclub Directory
+      h3 A list of Bar's and Night Club's in Barrie, ON
+      hr
+      .row
+        .large-12.columns(role='content')
+         a.button(href='/') Home
+         a.button(href='/directory', title='list Directories') List Directories 
+         a.button(href='/directory/add') Add Directory
+         block content

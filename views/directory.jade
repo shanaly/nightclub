@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    div(class='container')
+        div(class='collapse navbar-collapse')    
+        h2 Directory List
+        table(class='table-bordered')
+            thead
+                th Name
+                th Phone
+                th Location
+                th Website
+                th Price
+                th Hours of Operation
+                th Edit
+                th Delete
+            tbody
+                each directory, i in businesses
+                    tr
+                        td #{directory.name}
+                        td #{directory.phone}
+                        td #{directory.location}
+                        td #{directory.website}
+                        td #{directory.price}
+                        td #{directory.hours}
+        
+                        td 
+                            a(href='directory/edit/#{directory._id}' title='Edit') Edit
+                        td 
+                            a(href='directory/delete/#{directory._id}' title='Delete' onclick='return confirm(\'Are you sure you want to delete this directory?\');') Delete
